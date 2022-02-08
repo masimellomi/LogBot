@@ -25,10 +25,10 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   }
   if (countread > 99) {
     FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그카운트1.txt');
-    FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그.txt');
+    FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그1.txt');
   }
   if (msg == prefix + "로그삭제") {
-    FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그.txt');
+    FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그1.txt');
     FS.remove("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그카운트1.txt');
     replier.reply(room + "의 로그를 성공적으로 삭제했습니다.");
   }
