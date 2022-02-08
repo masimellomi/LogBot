@@ -13,10 +13,10 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   var d = new Date();
   const FS = FileStream;
   const mybotname = "마시멜로봇";
-  FS.append("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그.txt', "𝑺𝒆𝒏𝒅𝒆𝒓 : " + sender + "\n𝑹𝒐𝒐𝒎 : " + room + "\n𝑴𝒆𝒔𝒔𝒂𝒈𝒆 : " + msg + "\n𝑻𝒊𝒎𝒆 : " + NowTime + "\n_________________________________\n\n\n");
-  FS.append("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그카운트1.txt', "1");
+  FS.append("/sdcard/" + mybotname + "의 로그/" + room + '/방의 로그1.txt', "𝑺𝒆𝒏𝒅𝒆𝒓 : " + sender + "\n𝑹𝒐𝒐𝒎 : " + room + "\n𝑴𝒆𝒔𝒔𝒂𝒈𝒆 : " + msg + "\n𝑻𝒊𝒎𝒆 : " + NowTime + "\n_________________________________\n\n\n");
+  FS.append("/sdcard/" + mybotname + "의 로그/" + room + '/방의 로그카운트1.txt', "1");
   //
-  var logread = FS.read("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그.txt');
+  var logread = FS.read("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그1.txt');
   var countread = FS.read("sdcard/" + mybotname + "의 로그/" + room + '/방의 로그카운트1.txt').length;
   var NowTime1 = d.getFullYear() + '년 ' + (d.getMonth() + 1) + '월 ' + d.getDate() + '일 ' + d.getHours() + '시 ' + d.getMinutes() + '분 ' + d.getSeconds() + '초 ';
   
